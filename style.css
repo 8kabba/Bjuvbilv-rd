@@ -22,8 +22,9 @@ nav ul li a:hover { color:#ff6b6b; }
 
 /* Hero */
 .hero {
-    background: url('https://github.com/8kabba/Bjuvbilv-rd/blob/main/minbild.jpg ?raw=true') center/cover no-repeat;
+    background: url('https://github.com/ditt-användarnamn/min-portfolio/blob/main/minbild.jpg?raw=true') center/cover no-repeat;
 }
+
  color:white; padding:120px 20px; text-align:center; }
 .hero-text { background:rgba(0,0,0,0.4); display:inline-block; padding:40px; border-radius:10px; }
 .hero .btn { display:inline-block; padding:12px 25px; margin-top:20px; background:#ff6b6b; color:white; border-radius:5px; text-decoration:none; transition:0.3s; }
