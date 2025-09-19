@@ -13,7 +13,7 @@ nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.
 nav ul li a:hover { color:#ff6b6b; }
 
 /* Hero */
-.hero { background:url(https://www.facebook.com/photo/?fbid=1347324149722099&set=a.103118977475962&locale=sv_SE)center/cover no-repeat; color:white; padding:120px 20px; text-align:center; }
+.hero { background:url("https://www.facebook.com/photo/?fbid=1347324149722099&set=a.103118977475962&locale=sv_SE")center/cover no-repeat; color:white; padding:120px 20px; text-align:center; }
 .hero-text { background:rgba(0,0,0,0.4); display:inline-block; padding:40px; border-radius:10px; }
 .hero .btn { display:inline-block; padding:12px 25px; margin-top:20px; background:#ff6b6b; color:white; border-radius:5px; text-decoration:none; transition:0.3s; }
 .hero .btn:hover { background:#ff4c4c; transform:scale(1.05); }
