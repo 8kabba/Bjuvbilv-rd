@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Färgglada Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">MinPortfolio</div>
+        <ul>
+            <li><a href="#om">Om</a></li>
+            <li><a href="#projekt">Projekt</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Hej! Jag är [Ditt Namn]</h1>
+            <p>Webbutvecklare & Designer</p>
+            <a href="#kontakt" class="btn"><i class="fa fa-envelope"></i> Kontakta mig</a>
+        </div>
+    </header>
+
+    <section id="om" class="fade-in gradient-bg">
+        <h2>Om mig</h2>
+        <p>Jag brinner för webbutveckling och design. Jag skapar moderna, responsiva och användarvänliga hemsidor.</p>
+    </section>
+
+    <section id="projekt" class="fade-in">
+        <h2>Mina Projekt</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa fa-code fa-3x"></i>
+                <h3>Webbplats 1</h3>
+                <p>Responsiv hemsida byggd med HTML, CSS och JavaScript.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-paint-brush fa-3x"></i>
+                <h3>Designprojekt</h3>
+                <p>Grafisk design och UI/UX för mobil och webb.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-gear fa-3x"></i>
+                <h3>Verktyg & Automation</h3>
+                <p>Automatiserade lösningar med script och verktyg.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="fade-in gradient-bg">
+        <h2>Kontakt</h2>
+        <p>Maila mig på: <a href="mailto:exempel@email.com">exempel@email.com</a></p>
+        <div class="social">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Min Färgglada Portfolio</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Fade-in animation
+        const faders = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        faders.forEach(fader => observer.observe(fader));
+    </script>
+</body>
+</html>
